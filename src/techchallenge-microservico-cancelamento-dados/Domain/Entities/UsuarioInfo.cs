@@ -9,7 +9,7 @@ namespace Domain.Entities
     public class UsuarioInfo
     {
         public string Nome { get; set; }
-        public int Endereco { get; set; }
-        public int NumeroTelefone { get; set; }
+        public string Endereco { get; set; }
+        public string NumeroTelefone { get; set; }
     }
 }

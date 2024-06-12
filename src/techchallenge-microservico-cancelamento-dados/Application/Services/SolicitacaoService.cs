@@ -1,4 +1,5 @@
 ﻿using Application.Services.Interfaces;
+using Domain.Entities;
 using Domain.Repositories;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,22 @@ namespace Application.Services
 
         public SolicitacaoService(ISolicitacaoRepository solicitacaoRepository)
         {
-            solicitacaoRepository = _solicitacaoRepository;
+            _solicitacaoRepository = solicitacaoRepository;
+        }
+
+        public async Task<List<Solicitacao>> GetAllSolicitacoes()
+        {
+            return await _solicitacaoRepository.GetAllSolicitacoes();
+        }
+
+        public async Task<Solicitacao> GetSolicitacaoById(string id)
+        {
+            return await _solicitacaoRepository.GetSolicitacaoById(id);
+        }
+
+        public async Task SaveSolicitacao(Solicitacao solicitacaoObj)
+        {
+           await _solicitacaoRepository.SaveSolicitacao(solicitacaoObj);
         }
     }
 }
