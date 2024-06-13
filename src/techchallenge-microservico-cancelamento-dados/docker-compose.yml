@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  tech-ms-cancelamento-dados:
+    image: ${DOCKER_REGISTRY-}techmscancelamentodados
+    build:
+      context: .
+      dockerfile: tech-ms-cancelamento-dados/Dockerfile
+    ports:
+      - "7013:80"
+      - "7014:443"
+    networks:
+      - prod-network
+    environment:
+      DatabaseConfig__ConnectionString: 'mongodb://admin:abc123!@mongodb-ms-cancelamento:27017'
+      DatabaseConfig__DatabaseName: 'ExclusaoDadosDb'
+      DatabaseConfig__CollectionName: 'Solicitacao'
+      DatabaseConfig__User: 'admin'
+      DatabaseConfig__Password: 'abc123!'
+      AWS_ACCESS_KEY_ID: ''
+      AWS_SECRET_ACCESS_KEY: ''
+      AWS_REGION: ''
+      MY_SECRET: ''
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    networks:
+        - prod-network
+    container_name: mongodb-ms-cancelamento
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: 'admin'
+        MONGO_INITDB_ROOT_PASSWORD: 'abc123!'
+
+networks:
+  prod-network:
+    driver: bridge
