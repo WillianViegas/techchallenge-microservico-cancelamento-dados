@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tech-ms-cancelamento-dados", "tech-ms-cancelamento-dados\tech-ms-cancelamento-dados.csproj", "{EE5C93FB-1040-4E81-82A8-DBE38136295E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tech-ms-cancelamento-dados-test", "tech-ms-cancelamento-dados-test\tech-ms-cancelamento-dados-test.csproj", "{250A55E8-8DF2-4E23-9480-AEA18E0F37E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tech-ms-cancelamento-dados-test", "tech-ms-cancelamento-dados-test\tech-ms-cancelamento-dados-test.csproj", "{250A55E8-8DF2-4E23-9480-AEA18E0F37E3}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{64583A6D-1B63-4849-BF8F-E063758939A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{250A55E8-8DF2-4E23-9480-AEA18E0F37E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{250A55E8-8DF2-4E23-9480-AEA18E0F37E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{250A55E8-8DF2-4E23-9480-AEA18E0F37E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64583A6D-1B63-4849-BF8F-E063758939A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64583A6D-1B63-4849-BF8F-E063758939A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64583A6D-1B63-4849-BF8F-E063758939A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64583A6D-1B63-4849-BF8F-E063758939A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
