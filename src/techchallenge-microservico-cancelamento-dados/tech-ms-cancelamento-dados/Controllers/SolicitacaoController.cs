@@ -67,6 +67,9 @@ namespace tech_ms_cancelamento_dados.Controllers
         {
             try
             {
+                if (string.IsNullOrEmpty(id))
+                    return TypedResults.BadRequest("Erro: Id inválido.");
+
                 var solicitacao = await _solicitacaoService.GetSolicitacaoById(id);
                 return TypedResults.Ok(solicitacao);
             }
