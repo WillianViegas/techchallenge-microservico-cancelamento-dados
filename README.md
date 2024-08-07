@@ -39,3 +39,24 @@ https://github.com/WillianViegas/techchallenge-microservico-producao
 https://github.com/WillianViegas/TechChallenge-LanchoneteTotem
 
 
+## Rodando ambiente com Docker
+
+### Pré-Requisitos
+* Possuir o docker instalado:
+    https://www.docker.com/products/docker-desktop/
+
+Acesse o diretório em que o repositório foi clonado através do terminal e
+execute os comandos:
+ - `docker-compose build` para compilar imagens, criar containers etc.
+ - `docker-compose up` para criar os containers do banco de dados e do projeto
+
+### Iniciando e finalizando containers
+Para inicializar execute o comando `docker-compose start` e
+para finalizar `docker-compose stop`
+
+Lembrando que se você for rodar pelo visual studio fica bem mais simplificado, basta estar com o docker desktop aberto na máquina e escolher a opção abaixo:
+
+![image](https://github.com/user-attachments/assets/6b77d29b-975c-494e-a222-5b4e0de8b866)
+
+
+
