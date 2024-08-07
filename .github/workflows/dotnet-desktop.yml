@@ -117,8 +117,8 @@ jobs:
 
     - name: Update Kubernetes Deployment
       run: |
-        kubectl set image deployment/techchallenge-microservico-cancelamento-dados techchallenge-microservico-cancelamento-dados=${{ secrets.AWS_REGISTRY_URL }}:ms-cancelamento-img-${{ env.TIMESTAMP }}
+        kubectl set image deployment/tech-ms-cancelamento-dados tech-ms-cancelamento-dados=${{ secrets.AWS_REGISTRY_URL }}:ms-cancelamento-img-${{ env.TIMESTAMP }}
 
     - name: Rollout Restart
       run: |
-        kubectl rollout restart deployment techchallenge-microservico-cancelamento-dados
+        kubectl rollout restart deployment tech-ms-cancelamento-dados
