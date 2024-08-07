@@ -46,7 +46,7 @@ jobs:
         cd src/techchallenge-microservico-cancelamento-dados
         TIMESTAMP=$(date +%Y%m%d%H%M%S)
         echo "TIMESTAMP=${TIMESTAMP}" >> $GITHUB_ENV
-        docker build -t ms-cancelamento-img:${TIMESTAMP} -f techchallenge-microservico-cancelamento-dados/Dockerfile .
+        docker build -t ms-cancelamento-img:${TIMESTAMP} -f tech-ms-cancelamento-dados/Dockerfile .
         docker tag ms-cancelamento-img:${TIMESTAMP} ${{ secrets.AWS_REGISTRY_URL }}:ms-cancelamento-img-${TIMESTAMP}
         docker push ${{ secrets.AWS_REGISTRY_URL }}:ms-cancelamento-img-${TIMESTAMP}
         
